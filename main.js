@@ -77,6 +77,10 @@ console.log(array[index])
 
 console.log("break")
 
+
+
+/*very important exercise*/
+
 var array = [3,6,67,6,23,11,100,8,93,0,17,24,7,1,33,45,28,33,23,12,99,100]
 var duplicateArray = []
 array.forEach(argument => {
@@ -87,7 +91,27 @@ array.forEach(argument => {
         duplicateArray.push(argument)
     }
 } 
-)
+) /*creates an array without duplicates*/
+
+/*second solution to exercise above:*/
+
+var arr = [3,6,67,6,23,11,100,8,93,0,17,24,7,1,33,45,28,33,23,12,99,100]
+var duplicateArr = []
+function duplicateArr (x) {
+    for (var i = 0; i < arr.length; i++) {
+        for (var j = i+1; j < arr.length; j++) {
+            if (x[i] === x[j]) {
+                if (duplicateArr.indexOf(x[i]) = -1) {
+                    duplicateArr.push(x[i])
+                }
+            }
+        }
+    } return duplicateArr
+} console.log(duplicateArr(arr))
+
+
+
+
 
 var myColor = ["Red", "Green", "White", "Black"]
 console.log('"' + myColor.join('","') + '"')
