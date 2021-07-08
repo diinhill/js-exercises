@@ -96,18 +96,20 @@ array.forEach(argument => {
 /*second solution to exercise above:*/
 
 var arr = [3,6,67,6,23,11,100,8,93,0,17,24,7,1,33,45,28,33,23,12,99,100]
-var duplicateArr = []
+
 function duplicateArr (x) {
-    for (var i = 0; i < arr.length; i++) {
-        for (var j = i+1; j < arr.length; j++) {
+    var duplicateArr = []
+    for (var i = 0; i < x.length; i++) {
+        for (var j = i + 1; j < x.length; j++) {
             if (x[i] === x[j]) {
-                if (duplicateArr.indexOf(x[i]) = -1) {
-                    duplicateArr.push(x[i])
+                if (duplicateArr.indexOf(x[i]) ===-1) {
+                    duplicateArr.push(x[j])
                 }
             }
         }
     } return duplicateArr
-} console.log(duplicateArr(arr))
+} 
+console.log(duplicateArr(arr))
 
 
 
